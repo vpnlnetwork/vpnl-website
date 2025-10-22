@@ -12,9 +12,9 @@ import { SkipLink } from "@/components/SkipLink"
 // import { toPosixPath } from "@/lib/utils/relativePath"
 // import { DEFAULT_LOCALE } from "@/lib/constants"
 
-const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
-  ssr: false,
-})
+// const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
+//   ssr: false,
+// })
 
 export const BaseLayout = async ({
   children,
@@ -75,7 +75,7 @@ export const BaseLayout = async ({
        * layout on initial load.
        */}
 
-      <FeedbackWidget />
+      {/* <FeedbackWidget /> */}
     </>
   )
 }

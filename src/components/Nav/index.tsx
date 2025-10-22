@@ -25,7 +25,7 @@ const Nav = async () => {
         className="inline-flex items-center no-underline"
         data-testid="nav-logo"
       >
-        <Image src="/vpnl.png" alt="VPNL" width={48} height={48} className="rounded-lg opacity-85 hover:opacity-100" />
+        <Image src="/logo.png" alt="VPNL" width={48} height={48} className="rounded-lg opacity-85 hover:opacity-100" />
       </BaseLink>
 
       <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">

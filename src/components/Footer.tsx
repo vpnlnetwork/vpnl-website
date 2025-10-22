@@ -114,7 +114,6 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
             </BaseLink>
           ))}
         </div>
-        <p className="mt-4 text-sm text-body-medium">© 2025 VPNL — Verifiable Performance Network Layer</p>
         <List className="m-0 flex list-none flex-col flex-wrap justify-center p-5 text-sm font-normal sm:flex-row sm:justify-between md:justify-center">
           {dipperLinks.map(({ href, text }) => (
             <ListItem key={text} className="px-2 text-center">
