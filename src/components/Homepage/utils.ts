@@ -5,11 +5,11 @@ import type { Lang } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
-import ImpactImage from "@/public/images/impact_transparent.png"
-import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
-import ManBabyWomanImage from "@/public/images/man-baby-woman.png"
-import RobotBarImage from "@/public/images/robot-help-bar.png"
-import MergeImage from "@/public/images/upgrades/merge.png"
+import SolverImage from "@/public/images/solver.png"
+import RiskImage from "@/public/images/risk.png"
+import ReputationImage from "@/public/images/reputation.png"
+import BuilderImage from "@/public/images/builder.png"
+import ProofsImage from "@/public/images/proofs.png"
 
 type Breakpoint = "mobile" | "lg" | "xl"
 type Direction = "down" | "up" | "right" | "left"
@@ -115,30 +115,30 @@ export const getBentoBoxItems = async (locale: Lang): Promise<BentoItem[]> => {
   return [
     {
       ...getCopy("stablecoins", "https://demo.vpnl.io"),
-      imgSrc: ManAndDogImage,
+      imgSrc: SolverImage,
       className: cn(colorOptions["primary"], getPosition(0)),
     },
     {
       ...getCopy("defi", "https://github.com/vpnlnetwork/vpnl#readme"),
-      imgSrc: ImpactImage,
+      imgSrc: RiskImage,
       imgWidth: 400,
       className: cn(colorOptions["accent-c"], getPosition(1)),
     },
     {
       ...getCopy("networks", "https://paragraph.com/@vpnl/vpnl-partners-with-dia-lumina-to-accelerate-decentralized-reputation-infrastructure"),
-      imgSrc: MergeImage,
+      imgSrc: ReputationImage,
       imgWidth: 320,
       className: cn(colorOptions["accent-b"], getPosition(2)),
     },
     {
       ...getCopy("dapps", "https://github.com/vpnlnetwork/vpnl"),
-      imgSrc: ManBabyWomanImage,
+      imgSrc: BuilderImage,
       imgWidth: 324,
       className: cn(colorOptions["accent-a"], getPosition(3)),
     },
     {
       ...getCopy("assets", "https://sepolia.arbiscan.io/address/0xD3Acf580A28977D24da7d20364A2F557606d439A"),
-      imgSrc: RobotBarImage,
+      imgSrc: ProofsImage,
       imgWidth: 324,
       className: cn(colorOptions["primary"], getPosition(4)),
     },
