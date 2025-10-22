@@ -8,7 +8,7 @@ import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
-import heroBase from "@/public/hero_final.png"
+import heroBase from "@/public/images/heroimage.png"
 
 const HomeHero = async ({ className }: ClassNameProp) => {
   const locale = getLocale()
@@ -28,8 +28,8 @@ const HomeHero = async ({ className }: ClassNameProp) => {
 
   return (
     <div className={cn("w-full", className)}>
-      <div className="w-full">
-        <img {...rest} alt={alt} className="w-full object-contain" />
+      <div className="h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
+        <img {...rest} alt={alt} className="h-full w-full object-cover object-bottom" />
       </div>
       <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 pt-16 pb-10 text-center">
         <div className="flex flex-col items-center gap-y-6 lg:max-w-3xl">
