@@ -330,29 +330,29 @@ const Page = async ({ params }: { params: PageParams }) => {
       title: t("page-index-developers-code-example-title-0"),
       description: t("page-index-developers-code-example-description-0"),
       codeLanguage: "language-solidity",
-      codeUrl: "/code-examples/SimpleWallet.sol",
-      eventName: "bank",
+      codeUrl: "/code-examples/QuerySolverReputation.sol",
+      eventName: "query-reputation",
     },
     {
       title: t("page-index-developers-code-example-title-1"),
       description: t("page-index-developers-code-example-description-1"),
       codeLanguage: "language-solidity",
-      codeUrl: "/code-examples/SimpleToken.sol",
-      eventName: "token",
+      codeUrl: "/code-examples/RiskAdjustedCollateral.sol",
+      eventName: "collateral",
     },
     {
       title: t("page-index-developers-code-example-title-2"),
       description: t("page-index-developers-code-example-description-2"),
-      codeLanguage: "language-javascript",
-      codeUrl: "/code-examples/CreateWallet.js",
-      eventName: "wallet",
+      codeLanguage: "language-solidity",
+      codeUrl: "/code-examples/RegisterVerification.sol",
+      eventName: "register",
     },
     {
       title: t("page-index-developers-code-example-title-3"),
       description: t("page-index-developers-code-example-description-3"),
       codeLanguage: "language-solidity",
-      codeUrl: "/code-examples/SimpleDomainRegistry.sol",
-      eventName: "dns",
+      codeUrl: "/code-examples/GetVerificationDetails.sol",
+      eventName: "verification-details",
     },
   ]
 
@@ -649,19 +649,19 @@ const Page = async ({ params }: { params: PageParams }) => {
               <p className="text-lg">{t("page-index-builders-description")}</p>
               <div className="flex flex-wrap gap-6 py-8">
                 <ButtonLink
-                  href="/developers/"
+                  href="https://github.com/vpnlnetwork/vpnl"
                   size="lg"
                   className="w-fit"
                   customEventOptions={{
                     eventCategory,
                     eventAction: "builders",
-                    eventName: "developers",
+                    eventName: "github",
                   }}
                 >
                   {t("page-index-builders-action-primary")} <ChevronNext />
                 </ButtonLink>
                 <ButtonLink
-                  href="/developers/docs/"
+                  href="https://github.com/vpnlnetwork/vpnl#readme"
                   size="lg"
                   variant="outline"
                   isSecondary
@@ -669,7 +669,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   customEventOptions={{
                     eventCategory,
                     eventAction: "builders",
-                    eventName: "dev docs",
+                    eventName: "docs",
                   }}
                 >
                   {t("page-index-builders-action-secondary")}
