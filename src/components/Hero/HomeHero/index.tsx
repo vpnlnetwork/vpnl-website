@@ -34,10 +34,10 @@ const HomeHero = async ({ className }: ClassNameProp) => {
       <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 pt-16 pb-10 text-center">
         <div className="flex flex-col items-center gap-y-6 lg:max-w-3xl">
           <h1 className="text-4xl font-black md:text-5xl lg:text-6xl">
-            Open reputation infrastructure for intent networks
+            Verifiable Performance Network Layer
           </h1>
           <p className="max-w-2xl text-lg text-body-medium lg:text-xl">
-            Measure solver performance, prove reliability, and coordinate trustlessly across rollups.
+            Open reputation infrastructure for intent networks. Measure solver performance, prove reliability, and coordinate trustlessly across rollups.
           </p>
           
           <div className="mt-4 flex flex-wrap justify-center gap-4">
