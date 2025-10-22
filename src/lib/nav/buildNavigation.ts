@@ -27,17 +27,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
       ],
     },
     build: {
-      label: "Telegram",
-      ariaLabel: "Telegram",
-      items: [
-        {
-          label: "Telegram",
-          description: "Join our Telegram",
-          href: "https://t.me/vpnlnetwork",
-        },
-      ],
-    },
-    participate: {
       label: "Contact",
       ariaLabel: "Contact",
       items: [
@@ -47,6 +36,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           href: "mailto:vpnlnetwork@proton.me",
         },
       ],
+    },
+    participate: {
+      label: "",
+      ariaLabel: "",
+      items: [],
     },
     research: {
       label: "",
