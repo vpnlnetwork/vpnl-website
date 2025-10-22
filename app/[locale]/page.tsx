@@ -170,6 +170,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     {
       label: "Verifiable solver performance",
       description: "Generate and query proof-based reputation data for solvers across rollups.",
+      href: "https://demo.vpnl.io",
       Svg: EthGlyphIcon,
       className: "text-primary hover:text-primary-hover",
       eventName: "verifiable performance",
@@ -177,6 +178,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     {
       label: "Risk-aware routing",
       description: "Route intents based on verified reliability scores instead of closed allowlists.",
+      href: "https://github.com/vpnlnetwork/vpnl#readme",
       Svg: BlockHeap,
       className: "text-accent-a hover:text-accent-a-hover",
       eventName: "risk routing",
@@ -184,6 +186,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     {
       label: "Reputation-backed coordination",
       description: "Standardize proof formats and share trust across ecosystems using VPNL's open schema.",
+      href: "https://paragraph.com/@vpnl",
       Svg: RoadmapSign,
       className: "text-accent-c hover:text-accent-c-hover",
       eventName: "reputation coordination",
@@ -191,6 +194,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     {
       label: "Builder integrations",
       description: "Plug the VPNL SDK into any intent framework or rollup to publish and verify scores.",
+      href: "https://github.com/vpnlnetwork/vpnl",
       Svg: Github,
       className: "text-accent-b hover:text-accent-b-hover",
       eventName: "builder integrations",
