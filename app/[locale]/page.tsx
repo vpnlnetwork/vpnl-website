@@ -962,14 +962,14 @@ export async function generateMetadata({
     return await getMetadata({
       locale,
       slug: [""],
-      title: "VPNL | Decentralized VPN Network",
-      description: "A permissionless, privacy-first VPN network built on Arbitrum. Try the demo, explore the contracts, and join the community.",
+      title: "VPNL — Verifiable Performance Network Layer",
+      description: "Open reputation infrastructure for intent networks. Measure solver performance, prove reliability, and coordinate trustlessly across rollups.",
       image: "/og-image.png",
     })
   } catch (error) {
     return {
-      title: "VPNL | Decentralized VPN Network",
-      description: "A permissionless, privacy-first VPN network built on Arbitrum.",
+      title: "VPNL — Verifiable Performance Network Layer",
+      description: "Open reputation infrastructure for intent networks. Measure solver performance, prove reliability, and coordinate trustlessly across rollups.",
     }
   }
 }

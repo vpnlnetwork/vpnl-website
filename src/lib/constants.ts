@@ -189,6 +189,10 @@ export const ATTESTANT_BLOG = "https://www.attestant.io/posts/"
 
 export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
+    name: "VPNL Blog",
+    href: "https://paragraph.com/@vpnl",
+  },
+  {
     name: "VPNL Network",
     href: "https://github.com/vpnlnetwork/vpnl",
   },
