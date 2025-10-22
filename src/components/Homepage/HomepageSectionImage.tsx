@@ -13,6 +13,7 @@ import learnHubHero from "@/public/images/heroes/learn-hub-hero.png"
 import learnHubHeroPortrait from "@/public/images/heroes/learn-hub-hero-portrait.png"
 import quizzesHubHero from "@/public/images/heroes/quizzes-hub-hero.png"
 import quizzesHubHeroPortrait from "@/public/images/heroes/quizzes-hub-hero-portrait.png"
+import heroBase from "@/public/hero.jpg"
 
 const imageMap: Record<
   string,
@@ -30,8 +31,8 @@ const imageMap: Record<
     desktop: learnHubHeroPortrait,
   },
   builders: {
-    mobile: developersHubHero,
-    desktop: developersHubHeroPortrait,
+    mobile: heroBase,
+    desktop: heroBase,
   },
   community: {
     mobile: quizzesHubHero,
