@@ -189,46 +189,16 @@ export const ATTESTANT_BLOG = "https://www.attestant.io/posts/"
 
 export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
-    href: "https://vitalik.eth.limo/",
-    feed: VITALIK_FEED,
+    name: "VPNL Network",
+    href: "https://github.com/vpnlnetwork/vpnl",
   },
   {
-    href: "https://blog.ethereum.org/",
-    feed: "https://blog.ethereum.org/en/feed.xml",
+    name: "DIA Oracles Blog",
+    href: "https://www.diadata.org/blog/",
   },
   {
-    href: "https://ethpandaops.io/posts/",
-    feed: "https://ethpandaops.io/posts/rss.xml",
-  },
-  {
-    href: "https://ethstaker.cc/blog",
-    feed: "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml",
-  },
-  {
-    name: "0xPARC",
-    href: "https://0xparc.org/blog",
-  },
-  { href: ATTESTANT_BLOG, feed: ATTESTANT_BLOG },
-  { name: "Devcon", href: "https://devcon.org/en/blogs/" },
-  {
-    href: "https://soliditylang.org/blog/",
-    feed: SOLIDITY_FEED,
-  },
-  {
-    href: "https://mirror.xyz/privacy-scaling-explorations.eth",
-    feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom",
-  },
-  {
-    href: "https://stark.mirror.xyz/",
-    feed: "https://stark.mirror.xyz/feed/atom",
-  },
-  {
-    href: "https://medium.com/ethereum-cat-herders/newsletter",
-    feed: "https://medium.com/feed/ethereum-cat-herders",
-  },
-  {
-    href: "https://geodework.com/blog",
-    feed: "https://geodework.com/feed.xml",
+    name: "Arbitrum Foundation",
+    href: "https://arbitrum.foundation/",
   },
 ]
 

@@ -127,11 +127,6 @@ const ValuesMarquee = dynamic(
   }
 )
 
-const fetchXmlBlogFeeds = async () => {
-  const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
-  return await fetchRSS(xmlUrls)
-}
-
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
@@ -143,7 +138,6 @@ const loadData = dataLoader(
     ["growThePieData", fetchGrowThePie],
     ["communityEvents", fetchCommunityEvents],
     ["attestantPosts", fetchAttestantPosts],
-    ["rssData", fetchXmlBlogFeeds],
   ],
   REVALIDATE_TIME * 1000
 )
@@ -166,7 +160,6 @@ const Page = async ({ params }: { params: PageParams }) => {
     growThePieData,
     communityEvents,
     attestantPosts,
-    xmlBlogs,
   ] = await loadData()
 
   const bentoItems = await getBentoBoxItems(locale)
@@ -411,15 +404,8 @@ const Page = async ({ params }: { params: PageParams }) => {
     })
     .slice(0, CALENDAR_DISPLAY_COUNT)
 
-  // RSS feed items
-  const polishedRssItems = polishRSSList([attestantPosts, ...xmlBlogs], locale)
-  const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
-
-  const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
-    name: source,
-    href: sourceUrl,
-  })) as CommunityBlog[]
-  blogLinks.push(...BLOGS_WITHOUT_FEED)
+  // Blog links - using VPNL-specific community blogs
+  const blogLinks = BLOGS_WITHOUT_FEED
 
   return (
     <>
@@ -813,13 +799,6 @@ const Page = async ({ params }: { params: PageParams }) => {
             </h3>
             <p>{t("page-index-posts-subtitle")}</p>
 
-            {/* dynamic / lazy loaded */}
-            <RecentPostsSwiper
-              className="mt-4 md:mt-16"
-              rssItems={rssItems}
-              eventCategory={eventCategory}
-            />
-
             <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
               <p className="text-lg">{t("page-index-posts-action")}</p>
               <div className="flex flex-wrap gap-x-6 gap-y-4">
@@ -838,7 +817,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                 ))}
               </div>
             </div>
-          </Section> */}
+          </Section>
 
           {/* Events section removed for VPNL */}
           {/* <Section id="events">
