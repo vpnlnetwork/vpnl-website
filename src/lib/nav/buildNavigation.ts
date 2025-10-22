@@ -5,6 +5,62 @@ type TranslateFn = (key: string) => string
 export const buildNavigation = (t: TranslateFn): NavSections => {
   return {
     learn: {
+      label: "Demo",
+      ariaLabel: "Demo",
+      items: [
+        {
+          label: "Demo",
+          description: "Try VPNL Demo",
+          href: "/demo",
+        },
+      ],
+    },
+    use: {
+      label: "GitHub",
+      ariaLabel: "GitHub",
+      items: [
+        {
+          label: "GitHub",
+          description: "View on GitHub",
+          href: "https://github.com/vpnlnetwork/vpnl",
+        },
+      ],
+    },
+    build: {
+      label: "Telegram",
+      ariaLabel: "Telegram",
+      items: [
+        {
+          label: "Telegram",
+          description: "Join our Telegram",
+          href: "https://t.me/vpnlnetwork",
+        },
+      ],
+    },
+    participate: {
+      label: "Contact",
+      ariaLabel: "Contact",
+      items: [
+        {
+          label: "Contact",
+          description: "Get in touch",
+          href: "mailto:vpnlnetwork@proton.me",
+        },
+      ],
+    },
+    research: {
+      label: "",
+      ariaLabel: "",
+      items: [],
+    },
+  }
+}
+
+// Original navigation preserved below (commented out for reference)
+/*
+export const buildNavigationOriginal = (t: TranslateFn): NavSections => {
+  return {
+    learn: {
       label: t("learn"),
       ariaLabel: t("learn-menu"),
       items: [
@@ -506,3 +562,4 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
     },
   }
 }
+*/

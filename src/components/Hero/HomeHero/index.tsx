@@ -55,11 +55,11 @@ const HomeHero = async ({ className }: ClassNameProp) => {
         </picture>
       </div>
       <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
-        <LanguageMorpher />
+        {/* <LanguageMorpher /> */}
         <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
-          <h1 className="font-black">{t("page-index-title")}</h1>
+          <h1 className="font-black">VPNL: Decentralized VPN Network</h1>
           <p className="max-w-96 text-md text-body-medium lg:text-lg">
-            {t("page-index-description")}
+            A permissionless, privacy-first VPN network built on Arbitrum. Try the demo, explore the contracts, and join the community.
           </p>
         </div>
       </div>

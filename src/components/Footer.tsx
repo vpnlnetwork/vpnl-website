@@ -22,23 +22,13 @@ import { useTranslation } from "@/hooks/useTranslation"
 const socialLinks = [
   {
     icon: Github,
-    href: "https://github.com/ethereum/ethereum-org-website",
+    href: "https://github.com/vpnlnetwork/vpnl",
     ariaLabel: "GitHub",
   },
   {
-    icon: Farcaster,
-    href: "https://warpcast.com/ethdotorg",
-    ariaLabel: "Farcaster",
-  },
-  {
     icon: Twitter,
-    href: "https://x.com/ethdotorg",
-    ariaLabel: "X",
-  },
-  {
-    icon: Discord,
-    href: "https://discord.gg/ethereum-org",
-    ariaLabel: "Discord",
+    href: "https://t.me/vpnlnetwork",
+    ariaLabel: "Telegram",
   },
 ]
 

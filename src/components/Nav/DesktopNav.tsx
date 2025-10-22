@@ -31,7 +31,8 @@ const DesktopNav = async ({ className }: { className?: string }) => {
 
         <ThemeToggleButton />
 
-        <DesktopLanguagePicker languages={languages} className="max-md:hidden">
+        {/* Language picker hidden for VPNL (English-only) */}
+        {/* <DesktopLanguagePicker languages={languages} className="max-md:hidden">
           <Button
             name={DESKTOP_LANGUAGE_BUTTON_NAME}
             variant="ghost"
@@ -42,7 +43,7 @@ const DesktopNav = async ({ className }: { className?: string }) => {
             <span className="max-lg:hidden">{t("languages")}&nbsp;</span>
             {locale.toUpperCase()}
           </Button>
-        </DesktopLanguagePicker>
+        </DesktopLanguagePicker> */}
       </div>
     </div>
   )

@@ -142,6 +142,9 @@ module.exports = (phase, { defaultConfig }) => {
     async redirects() {
       return [
         { source: '/demo', destination: 'https://demo.vpnl.io', permanent: false },
+        { source: '/developers/:path*', destination: '/', permanent: false },
+        { source: '/community/:path*', destination: '/', permanent: false },
+        { source: '/contributing/:path*', destination: '/', permanent: false },
       ];
     },
     experimental: {

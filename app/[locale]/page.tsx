@@ -985,23 +985,17 @@ export async function generateMetadata({
   const { locale } = params
 
   try {
-    const t = await getTranslations({ locale, namespace: "page-index" })
     return await getMetadata({
       locale,
       slug: [""],
-      title: t("page-index-meta-title"),
-      description: t("page-index-meta-description"),
+      title: "VPNL | Decentralized VPN Network",
+      description: "A permissionless, privacy-first VPN network built on Arbitrum. Try the demo, explore the contracts, and join the community.",
+      image: "/og-image.png",
     })
   } catch (error) {
-    const t = await getTranslations({
-      locale: DEFAULT_LOCALE,
-      namespace: "common",
-    })
-
-    // Return basic metadata for invalid paths
     return {
-      title: t("page-not-found"),
-      description: t("page-not-found-description"),
+      title: "VPNL | Decentralized VPN Network",
+      description: "A permissionless, privacy-first VPN network built on Arbitrum.",
     }
   }
 }

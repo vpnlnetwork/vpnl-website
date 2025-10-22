@@ -86,8 +86,9 @@ export default async function MobileMenu({
           </TabsPrimitive.Content>
 
           <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
-            <TabsPrimitive.List className="grid h-auto w-full grid-cols-3">
-              <div className="flex flex-col items-center gap-1 py-2">
+            <TabsPrimitive.List className="grid h-auto w-full grid-cols-2">
+              {/* Language picker hidden for VPNL (English-only) */}
+              {/* <div className="flex flex-col items-center gap-1 py-2">
                 <TabsPrimitive.Trigger value="languages" asChild>
                   <FooterButton
                     icon={Languages}
@@ -97,7 +98,7 @@ export default async function MobileMenu({
                     <FooterItemText>{t("languages")}</FooterItemText>
                   </FooterButton>
                 </TabsPrimitive.Trigger>
-              </div>
+              </div> */}
               <div className="flex flex-col items-center gap-1 py-2">
                 <ThemeToggleFooterButton />
               </div>

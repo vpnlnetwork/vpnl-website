@@ -28,13 +28,13 @@
     --border-low-contrast: var(--gray-100);
     --border-hover: var(--gray-300);
 
-    --primary: var(--purple-600);
-    --primary-high-contrast: var(--purple-800);
-    --primary-low-contrast: var(--purple-100);
-    --primary-hover: var(--purple-500);
-    --primary-visited: var(--purple-700);
-    --primary-action: var(--purple-600);
-    --primary-action-hover: var(--purple-500);
+    --primary: 218, 100%, 56%;
+    --primary-high-contrast: 218, 100%, 40%;
+    --primary-low-contrast: 218, 100%, 95%;
+    --primary-hover: 218, 100%, 65%;
+    --primary-visited: 218, 100%, 45%;
+    --primary-action: 218, 100%, 56%;
+    --primary-action-hover: 218, 100%, 65%;
 
     --accent-a: var(--blue-600);
     --accent-a-hover: var(--blue-500);
