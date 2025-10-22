@@ -670,7 +670,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                 />
               </div>
             </SectionContent>
-          </Section> */}
+          </Section>
 
           {/* Community section removed for VPNL */}
           {/* <Section
