@@ -1,0 +1,240 @@
+0) Add your hero image
+
+Put your image in public/hero.jpg (rename your hero.JPG to hero.jpg so Next/Image won’t choke on the extension).
+
+In Replit shell:
+
+# if not already there
+ls public/hero.jpg || echo "Upload hero.jpg to /public"
+
+1) Replace the word “ETHEREUM.ORG” in the mobile burger menu
+
+Search for the drawer/header text:
+
+rg -n "ETHEREUM\.ORG|Ethereum\.org" src app | head
+# common hit:
+# src/components/Nav/MobileMenu/index.tsx
+# or src/components/Nav/MobileMenu/MobileMenu.tsx
+
+
+Open that file and change the brand label:
+
+// OLD (example)
+<span className="font-semibold">ETHEREUM.ORG</span>
+
+// NEW
+<span className="font-semibold">VPNL.IO</span>
+
+
+If the label is a Logo/Wordmark component, pass a label="VPNL.IO" prop or replace its text node.
+
+Also change the aria-label on the burger button if it mentions Ethereum:
+
+// OLD
+<button aria-label="Open ethereum.org menu" ...>
+
+// NEW
+<button aria-label="Open VPNL menu" ...>
+
+2) Set the header logo to /vpnl.png (desktop + mobile)
+
+Search for the logo component:
+
+rg -n "logo|wordmark|ethereum.*svg|Image.*src=.*logo" src app | head
+# common:
+# src/components/Nav/DesktopNav.tsx
+# src/components/Nav/Logo.tsx or similar
+
+
+Patch wherever the image is rendered:
+
+import Image from "next/image";
+
+// OLD (examples)
+// <Image src="/images/ethereum-logo.svg" alt="ethereum.org" ... />
+// <Wordmark />
+
+// NEW
+<Image
+  src="/vpnl.png"
+  alt="VPNL"
+  width={32}
+  height={32}
+  style={{ borderRadius: 8 }}
+/>
+
+
+If the app uses a Logo component, open that file and change its src there to /vpnl.png.
+
+3) Replace the hero section with your image + correct name
+
+Search for the homepage hero:
+
+rg -n "HomeHero|hero|Decentralized VPN Network|ethereum|Welcome" app src | head
+# often:
+# src/components/Hero/HomeHero/index.tsx
+# OR app/[locale]/page.tsx (hero inline)
+
+
+Replace the hero JSX with this (keeps layout neutral, uses your image, sets correct name):
+
+import Image from "next/image";
+import Link from "next/link";
+
+export default function HomeHeroVPNL() {
+  return (
+    <section style={{ background: "#FFFFFF" }}>
+      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "48px 20px", display: "grid", gap: 24, gridTemplateColumns: "1.1fr 0.9fr" }}>
+        <div>
+          <h1 style={{ fontSize: "clamp(28px,6vw,56px)", lineHeight: 1.05, margin: 0 }}>
+            VPNL — Verifiable Performance Network Layer
+          </h1>
+          <p style={{ marginTop: 12, color: "#4B5563", fontSize: 18, maxWidth: 720 }}>
+            Open reputation for intent networks. Protocols query solver performance, calibrate risk with proofs,
+            and route intelligently — without closed allowlists or blunt collateral.
+          </p>
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 16 }}>
+            <a href="https://demo.vpnl.io" style={{ padding: "12px 16px", borderRadius: 10, background: "#1F6FFF", color: "#fff", textDecoration: "none", fontWeight: 600 }}>
+              Try the Demo
+            </a>
+            <a href="https://github.com/vpnlnetwork/vpnl" style={{ padding: "12px 16px", borderRadius: 10, border: "1px solid #E5E7EB", textDecoration: "none", color: "#0A0A0A" }}>
+              View on GitHub
+            </a>
+          </div>
+
+          <div style={{ marginTop: 16, padding: 14, border: "1px solid #E5E7EB", borderRadius: 12, background: "#FAFAFA" }}>
+            <strong>Contracts</strong> (Arbitrum Sepolia):{" "}
+            <a href="https://sepolia.arbiscan.io/address/0xD3Acf580A28977D24da7d20364A2F557606d439A" style={{ color: "#1F6FFF", textDecoration: "underline" }}>
+              0xD3Acf580A28977D24da7d20364A2F557606d439A
+            </a>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Image src="/hero.jpg" alt="VPNL" width={720} height={420} style={{ width: "100%", height: "auto", borderRadius: 16, border: "1px solid #E5E7EB" }} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+If your page currently imports HomeHero from ethereum.org, either replace the import to your new component or inline this into app/[locale]/page.tsx.
+
+4) Replace the “Pick a wallet / Get ETH / Try apps / Start building”
+
+Keep the 4-card layout, change copy/links to VPNL equivalents. In the same homepage file, locate that section and replace with:
+
+<section style={{ maxWidth: 1080, margin: "0 auto", padding: "0 20px 24px", display: "grid", gap: 14, gridTemplateColumns: "repeat(auto-fit, minmax(240px,1fr))" }}>
+  <div style={{ padding: 18, border: "1px solid #E5E7EB", borderRadius: 12 }}>
+    <h3 style={{ margin: 0, marginBottom: 6, fontSize: 18 }}>Query performance</h3>
+    <p style={{ margin: 0, color: "#4B5563" }}>Pull solver reputation and behavior via on-chain attestations.</p>
+  </div>
+  <div style={{ padding: 18, border: "1px solid #E5E7EB", borderRadius: 12 }}>
+    <h3 style={{ margin: 0, marginBottom: 6, fontSize: 18 }}>Risk-aware routing</h3>
+    <p style={{ margin: 0, color: "#4B5563" }}>Route intents using verifiable performance instead of allowlists.</p>
+  </div>
+  <div style={{ padding: 18, border: "1px solid #E5E7EB", borderRadius: 12 }}>
+    <h3 style={{ margin: 0, marginBottom: 6, fontSize: 18 }}>Plug into rollups</h3>
+    <p style={{ margin: 0, color: "#4B5563" }}>Verifier-friendly design works with L2s and downstream proving.</p>
+  </div>
+  <div style={{ padding: 18, border: "1px solid #E5E7EB", borderRadius: 12 }}>
+    <h3 style={{ margin: 0, marginBottom: 6, fontSize: 18 }}>What’s live now</h3>
+    <p style={{ margin: 0, color: "#4B5563" }}>
+      Demo, testnet contracts, and repo are live.{" "}
+      <a href="https://github.com/vpnlnetwork/vpnl" style={{ color: "#1F6FFF", textDecoration: "underline" }}>Start here</a>.
+    </p>
+  </div>
+</section>
+
+5) Builders block → VPNL builder info
+
+Replace that whole “Builders” block with:
+
+<section style={{ maxWidth: 1080, margin: "0 auto", padding: "0 20px 24px" }}>
+  <div style={{ padding: 18, border: "1px solid #E5E7EB", borderRadius: 12 }}>
+    <h2 style={{ marginTop: 0 }}>Builders</h2>
+    <p style={{ color: "#4B5563", marginTop: 8 }}>
+      VPNL is designed for intent frameworks and rollups. Write your integrations in TypeScript or Solidity, and
+      query performance via our on-chain attestations.
+    </p>
+    <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 8 }}>
+      <a href="https://github.com/vpnlnetwork/vpnl" style={{ padding: "10px 14px", borderRadius: 10, background: "#1F6FFF", color: "#fff", textDecoration: "none", fontWeight: 600 }}>Builder’s portal</a>
+      <a href="https://github.com/vpnlnetwork/vpnl#readme" style={{ padding: "10px 14px", borderRadius: 10, border: "1px solid #E5E7EB", textDecoration: "none", color: "#0A0A0A" }}>Documentation</a>
+    </div>
+  </div>
+</section>
+
+6) Code examples toggles → retitle to VPNL-relevant examples
+
+You can keep the UI, just rename the four examples:
+
+“Reputation query API” — how to fetch solver scores
+
+“Routing with confidence” — route based on thresholds
+
+“Attestation format” — read/write proof payloads
+
+“Verifier hooks” — plug verifiers into rollups
+
+If the examples are data-driven, search and edit the content file:
+
+rg -n "Your own bank|Your own currency|JavaScript Ethereum wallet|permissionless DNS" src content app
+
+
+Replace the titles/blurbs; keep the code blocks for now (or stub them).
+
+7) Recent posts → “VPNL Blog”
+
+Short-term: turn that section into two VPNL links so it isn’t referencing Ethereum blogs:
+
+<section style={{ maxWidth: 1080, margin: "0 auto", padding: "0 20px 24px" }}>
+  <h2 style={{ marginTop: 0 }}>Recent posts</h2>
+  <ul>
+    <li><a href="https://github.com/vpnlnetwork/vpnl/releases" target="_blank" rel="noreferrer">Release notes & updates</a></li>
+    <li><a href="https://github.com/vpnlnetwork/vpnl/discussions" target="_blank" rel="noreferrer">Design notes & discussions</a></li>
+  </ul>
+</section>
+
+
+(We can wire a real blog later.)
+
+8) “Join ethereum.org” → “Join VPNL”
+
+Search the block:
+
+rg -n "Join ethereum\.org|How to contribute" app src | head
+
+
+Replace with:
+
+<section style={{ maxWidth: 1080, margin: "0 auto", padding: "0 20px 24px" }}>
+  <h2 style={{ marginTop: 0 }}>Join VPNL</h2>
+  <p>This project is open source. Contribute code, issues, and ideas.</p>
+  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+    <a href="https://github.com/vpnlnetwork/vpnl" className="btn btn-primary">GitHub</a>
+    <a href="https://t.me/vpnlnetwork" className="btn">Telegram</a>
+    <a href="mailto:vpnlnetwork@proton.me" className="btn">Email</a>
+  </div>
+</section>
+
+9) Make primary color = #1F6FFF everywhere
+
+Search the token or Tailwind variable:
+
+rg -n "--color-primary|--primary|theme.*colors.*primary|brand" src styles tailwind* | head
+
+
+If CSS variable, set --color-primary: #1F6FFF; in the light theme scope.
+
+If Tailwind config defines colors.primary, set it to #1F6FFF.
+
+This ensures buttons/links use your blue automatically.
+
+10) Build & check
+pnpm dev
+# eyeball the homepage for:
+# - header logo using /vpnl.png
+# - burger drawer says VPNL.IO
+# - hero uses /hero.jpg and correct product name
+# - ethereum blocks gone, replaced with VPNL sections
