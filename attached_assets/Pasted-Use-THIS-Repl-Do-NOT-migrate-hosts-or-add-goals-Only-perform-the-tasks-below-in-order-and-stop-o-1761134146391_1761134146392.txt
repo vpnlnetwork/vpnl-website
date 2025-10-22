@@ -1,0 +1,71 @@
+Use THIS Repl. Do NOT migrate hosts or add goals. Only perform the tasks below, in order, and stop on any error with the exact file/line.
+
+0) Preconditions
+- If a dev server is running, stop it.
+- Confirm repo root is the working dir.
+
+1) Move Netlify config to repo root (idempotent)
+- If ./public/netlify.toml exists, move it to ./netlify.toml.
+- If ./netlify.toml already exists, ensure it contains:
+  [build]
+    command = "pnpm build"
+    publish = ".next"
+  [[plugins]]
+    package = "@netlify/plugin-nextjs"
+- Do NOT keep a copy under /public.
+
+2) Add /demo redirect in Next config (idempotent)
+- Create or update ./next.config.js so it exports:
+  /** @type {import('next').NextConfig} */
+  const nextConfig = {
+    async redirects() {
+      return [
+        { source: '/demo', destination: 'https://demo.vpnl.io', permanent: false },
+      ];
+    },
+  };
+  module.exports = nextConfig;
+- If a Next config already exists, MERGE this redirects() into it without removing any existing config.
+
+3) VPNL inputs (use these unless I change them)
+- Repo: vpnlnetwork/vpnl-website
+- Demo: https://demo.vpnl.io
+- GitHub link: https://github.com/vpnlnetwork/vpnl
+- Email: vpnlnetwork@proton.me
+- Telegram: https://t.me/vpnlnetwork
+- ENS/Wallet (footer): vpnlnetwork.eth → 0xA72f18834007D788cdc8069C3AB2FBa5ec9571ee
+- Contract (Arbitrum Sepolia): 0xD3Acf580A28977D24da7d20364A2F557606d439A (use sepolia.arbiscan link)
+- Assets live in /public (vpnl.png, icon-*.png, og-image.png, site.webmanifest)
+- Locales: English-only
+- Theme: light bg, blue accents — Primary #1F6FFF; Text #0A0A0A; Secondary #4B5563; Border #E5E7EB.
+
+4) Trim ethereum.org UI to VPNL
+- Remove/hide EF-specific nav/pages: Contribute, POAP/OATs, Translation, EF links/Discord.
+- Set nav to: Home · Demo · GitHub · Telegram · Contact.
+
+5) Branding & assets
+- Use /public/vpnl.png as header logo.
+- Wire favicons + site.webmanifest + og-image.png in the <Head>/SEO.
+- Set default theme to light; apply Primary color #1F6FFF to buttons/links/focus.
+
+6) Homepage sections
+- Keep: Overview · What’s live now (testnet+demo+repo) · Why it matters · Roadmap · Contact/CTA.
+- Add a “Contracts” strip listing the Arbitrum Sepolia address with explorer link.
+
+7) i18n slimming
+- Build English-only; hide locale switcher if present.
+
+8) Build & test locally
+- Run: pnpm build && pnpm start
+- If any errors, fix and re-run. Stop and report what changed.
+
+9) Commit & push
+- Commit message: "feat: VPNL branding, light theme, /demo redirect, Netlify config"
+- Push to origin.
+
+10) Stop when ready for Netlify UI connection
+- Output a short summary of files changed (paths), and confirm:
+  - netlify.toml is at repo root
+  - /demo redirect works
+  - English-only build
+  - MIT license kept with attribution note in README

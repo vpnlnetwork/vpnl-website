@@ -139,6 +139,11 @@ module.exports = (phase, { defaultConfig }) => {
 
   nextConfig = {
     ...nextConfig,
+    async redirects() {
+      return [
+        { source: '/demo', destination: 'https://demo.vpnl.io', permanent: false },
+      ];
+    },
     experimental: {
       ...experimental,
       instrumentationHook: true,
