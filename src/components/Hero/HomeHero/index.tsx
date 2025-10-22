@@ -8,7 +8,7 @@ import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
-import heroBase from "@/public/VPNLhero.png"
+import heroBase from "@/public/modern.png"
 
 const HomeHero = async ({ className }: ClassNameProp) => {
   const locale = getLocale()
