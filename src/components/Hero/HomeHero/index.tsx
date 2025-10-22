@@ -31,7 +31,7 @@ const HomeHero = async ({ className }: ClassNameProp) => {
       <div className="h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
         <img {...rest} alt={alt} className="h-full w-full object-cover" />
       </div>
-      <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
+      <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 pt-16 pb-10 text-center">
         <div className="flex flex-col items-center gap-y-6 lg:max-w-3xl">
           <h1 className="text-4xl font-black md:text-5xl lg:text-6xl">
             Open reputation infrastructure for intent networks
