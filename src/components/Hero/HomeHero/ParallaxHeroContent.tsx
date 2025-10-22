@@ -8,7 +8,7 @@ interface ParallaxHeroContentProps {
 
 export const ParallaxHeroContent = ({ children }: ParallaxHeroContentProps) => {
   return (
-    <div className="relative -mt-20 flex flex-col items-center px-4 pb-10 text-center md:-mt-24 lg:-mt-32">
+    <div className="relative -mt-16 flex flex-col items-center px-4 pb-10 text-center md:-mt-20 lg:-mt-24">
       <div className="flex flex-col items-center gap-y-6 lg:max-w-3xl">
         {children}
       </div>
