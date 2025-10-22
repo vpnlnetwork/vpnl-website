@@ -27,6 +27,28 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
       ],
     },
     build: {
+      label: "Blog",
+      ariaLabel: "Blog",
+      items: [
+        {
+          label: "Blog",
+          description: "Read our blog",
+          href: "https://paragraph.com/@vpnl",
+        },
+      ],
+    },
+    participate: {
+      label: "Community",
+      ariaLabel: "Community",
+      items: [
+        {
+          label: "Community",
+          description: "Join our Telegram",
+          href: "https://t.me/vpnlnetwork",
+        },
+      ],
+    },
+    research: {
       label: "Contact",
       ariaLabel: "Contact",
       items: [
@@ -36,16 +58,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           href: "mailto:vpnlnetwork@proton.me",
         },
       ],
-    },
-    participate: {
-      label: "",
-      ariaLabel: "",
-      items: [],
-    },
-    research: {
-      label: "",
-      ariaLabel: "",
-      items: [],
     },
   }
 }
