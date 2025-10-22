@@ -23,7 +23,7 @@ const HomeHero = async ({ className }: ClassNameProp) => {
   }
 
   const {
-    props: { srcSet: srcSetBase, ...rest },
+    props: { srcSet: srcSetBase, blurWidth, blurHeight, ...rest },
   } = getImageProps({ ...common, ...heroBase, quality: 80 })
 
   return (
