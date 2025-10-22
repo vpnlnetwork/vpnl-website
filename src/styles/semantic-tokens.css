@@ -191,11 +191,11 @@
     --border-low-contrast: var(--gray-900);
     --border-hover: var(--gray-500);
 
-    --primary: var(--purple-400);
-    --primary-high-contrast: var(--purple-200);
-    --primary-low-contrast: var(--purple-900);
-    --primary-hover: var(--purple-300);
-    --primary-visited: var(--purple-500);
+    --primary: 218, 100%, 70%;
+    --primary-high-contrast: 218, 100%, 85%;
+    --primary-low-contrast: 218, 100%, 20%;
+    --primary-hover: 218, 100%, 75%;
+    --primary-visited: 218, 100%, 60%;
 
     --accent-a: var(--blue-400);
     --accent-a-hover: var(--blue-300);
