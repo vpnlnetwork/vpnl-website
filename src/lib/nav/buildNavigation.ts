@@ -11,7 +11,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
         {
           label: "Demo",
           description: "Try VPNL Demo",
-          href: "/demo",
+          href: "https://demo.vpnl.io",
         },
       ],
     },
