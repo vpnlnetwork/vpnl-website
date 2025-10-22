@@ -55,12 +55,40 @@ const HomeHero = async ({ className }: ClassNameProp) => {
         </picture>
       </div>
       <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
-        {/* <LanguageMorpher /> */}
-        <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
-          <h1 className="font-black">VPNL: Decentralized VPN Network</h1>
-          <p className="max-w-96 text-md text-body-medium lg:text-lg">
-            A permissionless, privacy-first VPN network built on Arbitrum. Try the demo, explore the contracts, and join the community.
+        <div className="flex flex-col items-center gap-y-6 lg:max-w-3xl">
+          <h1 className="text-4xl font-black md:text-5xl lg:text-6xl">
+            VPNL — Verifiable Performance Network Layer
+          </h1>
+          <p className="max-w-2xl text-lg text-body-medium lg:text-xl">
+            A permissionless, privacy-first VPN network built on Arbitrum.
           </p>
+          
+          <div className="mt-4 flex flex-wrap justify-center gap-4">
+            <a 
+              href="https://demo.vpnl.io" 
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-hover"
+            >
+              Try Demo
+            </a>
+            <a 
+              href="https://github.com/vpnlnetwork/vpnl" 
+              className="inline-flex items-center gap-2 rounded-lg border-2 border-primary px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary-low-contrast"
+            >
+              View on GitHub
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-col items-center gap-2 rounded-lg border border-body-light bg-background-highlight px-4 py-3 text-sm">
+            <div className="font-semibold text-body-medium">Contract Address (Arbitrum Sepolia)</div>
+            <a 
+              href="https://sepolia.arbiscan.io/address/0xD3Acf580A28977D24da7d20364A2F557606d439A"
+              className="font-mono text-primary hover:text-primary-hover"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              0xD3Acf580A28977D24da7d20364A2F557606d439A
+            </a>
+          </div>
         </div>
       </div>
     </div>

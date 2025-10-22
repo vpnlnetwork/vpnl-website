@@ -510,8 +510,8 @@ const Page = async ({ params }: { params: PageParams }) => {
             ))}
           </Section>
 
-          {/* Activity - The strongest ecosystem */}
-          <Section id="activity" variant="responsiveFlex">
+          {/* Activity section removed for VPNL */}
+          {/* <Section id="activity" variant="responsiveFlex">
             <SectionBanner>
               <HomepageSectionImage sectionId="activity" alt="" />
             </SectionBanner>
@@ -553,10 +553,10 @@ const Page = async ({ params }: { params: PageParams }) => {
                 </div>
               </div>
             </SectionContent>
-          </Section>
+          </Section> */}
 
-          {/* Learn - Understand Ethereum */}
-          <Section
+          {/* Learn section removed for VPNL */}
+          {/* <Section
             id="learn"
             variant="responsiveFlex"
             className="md:flex-row-reverse"
@@ -689,10 +689,10 @@ const Page = async ({ params }: { params: PageParams }) => {
                 />
               </div>
             </SectionContent>
-          </Section>
+          </Section> */}
 
-          {/* Ethereum.org community - Built by the community */}
-          <Section
+          {/* Community section removed for VPNL */}
+          {/* <Section
             id="community"
             variant="responsiveFlex"
             className="md:flex-row-reverse"
@@ -843,10 +843,10 @@ const Page = async ({ params }: { params: PageParams }) => {
                 ))}
               </div>
             </div>
-          </Section>
+          </Section> */}
 
-          {/* Events */}
-          <Section id="events">
+          {/* Events section removed for VPNL */}
+          {/* <Section id="events">
             <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
               {t("page-index-events-header")}
             </h3>
@@ -926,7 +926,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                 {t("page-index-events-action")} <ChevronNext />
               </ButtonLink>
             </div>
-          </Section>
+          </Section> */}
 
           {/* Join ethereum.org */}
           <Section
