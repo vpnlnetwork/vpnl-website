@@ -54,18 +54,6 @@ const HomeHero = async ({ className }: ClassNameProp) => {
             View on GitHub
           </a>
         </div>
-
-        <div className="mt-8 flex flex-col items-center gap-2 rounded-lg border border-body-light bg-background-highlight px-4 py-3 text-sm">
-          <div className="font-semibold text-body-medium">Contracts (Arbitrum Sepolia)</div>
-          <a 
-            href="https://sepolia.arbiscan.io/address/0xD3Acf580A28977D24da7d20364A2F557606d439A"
-            className="font-mono text-primary hover:text-primary-hover"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            0xD3Acf580A28977D24da7d20364A2F557606d439A
-          </a>
-        </div>
       </ParallaxHeroContent>
     </div>
   )
