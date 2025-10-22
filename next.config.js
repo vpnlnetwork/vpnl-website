@@ -170,6 +170,8 @@ module.exports = (phase, { defaultConfig }) => {
         { source: '/ethereum-vs-bitcoin/:path*', destination: '/', permanent: false },
         { source: '/ethereum-history-founder-and-ownership/:path*', destination: '/', permanent: false },
         { source: '/trillion-dollar-security/:path*', destination: '/', permanent: false },
+        { source: '/guides/:path*', destination: '/', permanent: false },
+        { source: '/whitepaper/:path*', destination: '/', permanent: false },
       ];
     },
     eslint: {
