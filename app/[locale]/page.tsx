@@ -175,36 +175,36 @@ const Page = async ({ params }: { params: PageParams }) => {
 
   const subHeroCTAs = [
     {
-      label: "Query performance",
-      description: "Pull solver reputation and behavior via on-chain attestations.",
-      href: "https://github.com/vpnlnetwork/vpnl#readme",
+      label: "Verifiable solver performance",
+      description: "Generate and query proof-based reputation data for solvers across rollups.",
+      href: "https://demo.vpnl.io",
       Svg: EthGlyphIcon,
       className: "text-primary hover:text-primary-hover",
-      eventName: "query performance",
+      eventName: "verifiable performance",
     },
     {
       label: "Risk-aware routing",
-      description: "Route intents using verifiable performance instead of allowlists.",
+      description: "Route intents based on verified reliability scores instead of closed allowlists.",
       href: "https://github.com/vpnlnetwork/vpnl#readme",
       Svg: BlockHeap,
       className: "text-accent-a hover:text-accent-a-hover",
       eventName: "risk routing",
     },
     {
-      label: "Plug into rollups",
-      description: "Verifier-friendly design works with L2s and downstream proving.",
-      href: "https://github.com/vpnlnetwork/vpnl#readme",
+      label: "Reputation-backed coordination",
+      description: "Standardize proof formats and share trust across ecosystems using VPNL's open schema.",
+      href: "https://paragraph.com/@vpnl/vpnl-partners-with-dia-lumina-to-accelerate-decentralized-reputation-infrastructure",
       Svg: RoadmapSign,
       className: "text-accent-c hover:text-accent-c-hover",
-      eventName: "rollups",
+      eventName: "reputation coordination",
     },
     {
-      label: "What's live now",
-      description: "Demo, testnet contracts, and repo are live. Start here.",
+      label: "Builder integrations",
+      description: "Plug the VPNL SDK into any intent framework or rollup to publish and verify scores.",
       href: "https://github.com/vpnlnetwork/vpnl",
       Svg: Github,
       className: "text-accent-b hover:text-accent-b-hover",
-      eventName: "live now",
+      eventName: "builder integrations",
     },
   ]
 

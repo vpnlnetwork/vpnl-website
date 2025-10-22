@@ -114,30 +114,30 @@ export const getBentoBoxItems = async (locale: Lang): Promise<BentoItem[]> => {
 
   return [
     {
-      ...getCopy("stablecoins", "/stablecoins/"),
+      ...getCopy("stablecoins", "https://demo.vpnl.io"),
       imgSrc: ManAndDogImage,
       className: cn(colorOptions["primary"], getPosition(0)),
     },
     {
-      ...getCopy("defi", "/defi/"),
+      ...getCopy("defi", "https://github.com/vpnlnetwork/vpnl#readme"),
       imgSrc: ImpactImage,
       imgWidth: 400,
       className: cn(colorOptions["accent-c"], getPosition(1)),
     },
     {
-      ...getCopy("networks", "/layer-2/"),
+      ...getCopy("networks", "https://paragraph.com/@vpnl/vpnl-partners-with-dia-lumina-to-accelerate-decentralized-reputation-infrastructure"),
       imgSrc: MergeImage,
       imgWidth: 320,
       className: cn(colorOptions["accent-b"], getPosition(2)),
     },
     {
-      ...getCopy("dapps", "/apps/"),
+      ...getCopy("dapps", "https://github.com/vpnlnetwork/vpnl"),
       imgSrc: ManBabyWomanImage,
       imgWidth: 324,
       className: cn(colorOptions["accent-a"], getPosition(3)),
     },
     {
-      ...getCopy("assets", "/nft/"),
+      ...getCopy("assets", "https://sepolia.arbiscan.io/address/0xD3Acf580A28977D24da7d20364A2F557606d439A"),
       imgSrc: RobotBarImage,
       imgWidth: 324,
       className: cn(colorOptions["primary"], getPosition(4)),

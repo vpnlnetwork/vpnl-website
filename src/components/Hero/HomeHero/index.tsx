@@ -37,7 +37,7 @@ const HomeHero = async ({ className }: ClassNameProp) => {
             VPNL — Verifiable Performance Network Layer
           </h1>
           <p className="max-w-2xl text-lg text-body-medium lg:text-xl">
-            A permissionless, privacy-first VPN network built on Arbitrum.
+            Open reputation infrastructure for intent networks. Measure solver performance, prove reliability, and coordinate trustlessly across rollups.
           </p>
           
           <div className="mt-4 flex flex-wrap justify-center gap-4">
@@ -56,7 +56,7 @@ const HomeHero = async ({ className }: ClassNameProp) => {
           </div>
 
           <div className="mt-8 flex flex-col items-center gap-2 rounded-lg border border-body-light bg-background-highlight px-4 py-3 text-sm">
-            <div className="font-semibold text-body-medium">Contract Address (Arbitrum Sepolia)</div>
+            <div className="font-semibold text-body-medium">Contracts (Arbitrum Sepolia)</div>
             <a 
               href="https://sepolia.arbiscan.io/address/0xD3Acf580A28977D24da7d20364A2F557606d439A"
               className="font-mono text-primary hover:text-primary-hover"
